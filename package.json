@@ -1,0 +1,28 @@
+{
+  "name": "rudolph",
+  "version": "0.0.0",
+  "description": "Rollup Development Server",
+  "author": "Blaine Bublitz <blaine.bublitz@gmail.com> (https://github.com/phated)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "micro-dev src/Main.bs.js"
+  },
+  "repository": "phated/rudolph",
+  "keywords": [],
+  "license": "MPL-2.0",
+  "dependencies": {
+    "@qwick/future": "^2.3.2-qwick.0",
+    "arg": "^4.1.0",
+    "chokidar": "^2.0.4",
+    "micro": "^9.3.3",
+    "rollup": "^1.1.2",
+    "serve-handler": "^5.0.7",
+    "simple-html-index": "^1.5.0",
+    "yargs": "^12.0.5"
+  },
+  "devDependencies": {
+    "bs-platform": "^4.0.18",
+    "micro-dev": "^3.0.0"
+  }
+}
