@@ -12,18 +12,34 @@
   },
   "buildDirs": {
     "test": {
-      "require": ["rudolph.lib"],
+      "require": [
+        "rudolph.lib"
+      ],
       "main": "TestRudolph",
       "name": "TestRudolph.exe"
     },
     "library": {
       "name": "rudolph.lib",
-      "namespace": "Rudolph"
+      "namespace": "Rudolph",
+      "require": [
+        "lwt",
+        "cohttp",
+        "cohttp-lwt-unix"
+      ],
+      "preprocess": [
+        "pps ppx_fast_pipe"
+      ]
     },
     "executable": {
-      "require": ["rudolph.lib"],
-      "main": "RudolphApp",
-      "name": "RudolphApp.exe"
+      "name": "rudolph.exe",
+      "main": "CommandLine",
+      "require": [
+        "rudolph.lib",
+        "cmdliner"
+      ],
+      "preprocess": [
+        "pps ppx_fast_pipe"
+      ]
     }
   },
   "scripts": {
@@ -31,11 +47,16 @@
     "test": "esy x TestRudolph.exe"
   },
   "dependencies": {
-    "@opam/dune": ">=1.6.0",
     "@esy-ocaml/reason": "*",
-    "refmterr": "*",
+    "@opam/cmdliner": "1.0.3",
+    "@opam/cohttp": "1.2.0",
+    "@opam/cohttp-lwt-unix": "1.2.0",
+    "@opam/dune": ">=1.6.0",
+    "@opam/lwt": "4.1.0",
+    "@opam/ppx_fast_pipe": "0.0.1",
     "ocaml": "^4.4.0",
-    "pesy": "*"
+    "pesy": "*",
+    "refmterr": "*"
   },
   "devDependencies": {
     "@opam/merlin": "*"
