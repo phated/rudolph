@@ -6,7 +6,7 @@
     "build": "pesy",
     "release": {
       "releasedBinaries": [
-        "RudolphApp.exe"
+        "rudolph.exe"
       ]
     }
   },
@@ -24,7 +24,8 @@
       "require": [
         "lwt",
         "cohttp",
-        "cohttp-lwt-unix"
+        "cohttp-lwt-unix",
+        "console.lib"
       ],
       "preprocess": [
         "pps ppx_fast_pipe"
@@ -35,7 +36,8 @@
       "main": "CommandLine",
       "require": [
         "rudolph.lib",
-        "cmdliner"
+        "cmdliner",
+        "console.lib"
       ],
       "preprocess": [
         "pps ppx_fast_pipe"
@@ -54,6 +56,7 @@
     "@opam/dune": ">=1.6.0",
     "@opam/lwt": "4.1.0",
     "@opam/ppx_fast_pipe": "0.0.1",
+    "@reason-native/console": "^0.0.3",
     "ocaml": "^4.4.0",
     "pesy": "*",
     "refmterr": "*"

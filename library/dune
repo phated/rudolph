@@ -7,6 +7,6 @@
    (name Rudolph)
    ; Other libraries list this name in their package.json 'require' field to use this library.
    (public_name rudolph.lib)
-   (libraries  lwt cohttp cohttp-lwt-unix )
+   (libraries  lwt cohttp cohttp-lwt-unix console.lib )
    (preprocess ( pps ppx_fast_pipe ))  ; From package.json preprocess field
 )
